@@ -56,13 +56,15 @@ paramètre doit correspondre à l’en-tête de la table HTML retournée.*/
 
 function generate_table_html(array, booléen) {
 
-
+/*creation table*/
   let table = document.createElement("table")
 
   document.body.appendChild(table);
   let tr = document.createElement("tr");
   let i = 0;
 
+
+/*creation header*/
   let on_your_mind = ["Titre du film", "Réalisateur", "Nationalité", "Année", "Durée", "Version"]
   let thead = document.createElement("thead")
   table.appendChild(thead)
@@ -73,11 +75,10 @@ function generate_table_html(array, booléen) {
     th = document.createElement("th")
     th.textContent = on_your_mind[i]
     tr.appendChild(th)
-
     i++;
   }
 
-
+/*creation tbody*/
   let tbody = document.createElement("tbody")
   table.appendChild(tbody)
   tr = document.createElement("tr");
@@ -94,6 +95,7 @@ function generate_table_html(array, booléen) {
     tr = document.createElement("tr");
     tbody.appendChild(tr)
 
+/*data entry*/
     while (j < current_element.length) {
       td_textContent = current_element[j]
       td = document.createElement("td")
@@ -138,6 +140,7 @@ function calcul_temperature(array, temperature) {
     current_element = array[i]
     j = 0
     while (j < current_element.length) {
+
       if (i > 0 && j == 2) {
         stock_element  = current_element
         if (stock_element[2]<temperature) {

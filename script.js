@@ -6,7 +6,7 @@ let cinema_film = [
   ["IN MY ROOM", "Ulrich Köhler", "Allemagne", 2019, "2h", "vf"],
   ["UN VIOLENT DÉSIR DE BONHEUR", "Clément Schneider", "France", 2018, "1h15", "vf"],
   ["WHAT YOU GONNA DO WHEN THE WORLD'S ON FIRE ?", "Roberto Minervini", "Etats-Unis/Italie", 2018, "2h30", "vostfr"],
-  ["GRASS", "Hong Sang-Soo", "Corée du Sud", 2018, "1h06", "vostfr"],
+  ["GRASS", "Hong Sang-Soo", "Corée du Sud", 2018, "1h06", "vostfr"]
 ]
 poster()
 
@@ -141,7 +141,7 @@ function calcul_temperature(array, temperature) {
       if (i > 0 && j == 2) {
         stock_element  = current_element
         if (stock_element[2]<temperature) {
-          temperature_low = stock_element[2]
+          temperature_low = stock_element[0]
           console.log(temperature_low);
         }
       }
@@ -149,4 +149,5 @@ function calcul_temperature(array, temperature) {
     }
   }
   return temperature_low
+
 }
